@@ -18,6 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/5f5ec56b94.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -36,7 +40,7 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Блог</a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#" class="dropdown-item">Категории</a></li>
+                                    <li><a href="{{route('admin.category.index')}}" class="dropdown-item">Категории</a></li>
                                     <li><a href="#" class="dropdown-item">Материалы</a></li>
                                 </ul>
                         </li>

@@ -11,12 +11,13 @@
 |
 */
 
-//Маршруты административной части. Префикс для маршрута - админ, 
+//Маршруты административной части. Префикс для маршрута - админ,
 //пространство имён - админ, т.к. контроллер в папке Admin
 //middleware что-бы не писать в контроллерах и каждой строчке, пишем один раз
 Route::group(['prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth']], function(){
     //роут к данному методу контроллера
     Route::get('/','DashboardController@dashboard')->name('admin.index');
+    Route::resource('/category','CategoryController', ['as'=>'admin']);
 });
 
 Route::get('/', function () {
